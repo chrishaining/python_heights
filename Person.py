@@ -1,7 +1,9 @@
 #to create a class, use the reserved word class followed by your class name. Classnames are written in UpperCamelCase.
 class Person:
-    def __init__(self, mother_height=162.6, father_height=175.6):
-        self.height = (mother_height + father_height) / 2
+    # def __init__(self, mother_height=162.6, father_height=175.6):
+    def __init__(self):
+        self.sex = type(self).__name__
+        # self.height = (mother_height + father_height) / 2
 
     # def __repr__(self):
     #     return {'height':self.height}

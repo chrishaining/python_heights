@@ -1,6 +1,7 @@
 from Person import Person
 from Male import Male
 import random
+from Group import Group
 
 class Female(Person):
     def __init__(self, mother_height=162.6, father_height=175.6):
@@ -12,8 +13,9 @@ class Female(Person):
         outcomes = [0, 1]
         choice = random.choice(outcomes)
         if choice == 0:
-          baby = Female()
+          baby = Female(self.height, male.height)
         else:
-          baby = Male()
+          baby = Male(self.height, male.height)
         self.children.append(baby)
+
         return baby

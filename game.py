@@ -70,6 +70,24 @@ male2 = Male(180, 190)
 print(male2.height)
 female2 = Female(175, 188)
 print(female2.height)
+female2.have_baby(male2)
+#expect c. 190 if male or 176 if female
+print(female2.children[0].height)
 
+female2.have_baby(male2)
+print(female2.children[1].height)
+
+female2.have_baby(male2)
+print(female2.children[2].height)
+
+female2.have_baby(male2)
+print(female2.children[3].height)
+print(female2.sex)
+
+#I want to check the information in the children list
+for index, value in enumerate(female2.children):
+    person=index
+    print("Person {person} is a {sex} and is {height} cm tall".format(person=person, sex=value.sex, height=value.height))
+print(female2.children[0])
 #create a new generation.
 #for each pair, the have baby function will be called on the female, using the male as an argument. this means the height of the new person will be partly inherited. also create a random sex. this will be an interesting attribute - if it's random, I could potentially not have enough new mating pairs.
