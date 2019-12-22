@@ -5,7 +5,7 @@ import random
 class Female(Person):
     def __init__(self, mother_height=162.6, father_height=175.6):
         super().__init__()
-        self.height = (mother_height + father_height) / 2
+        self.height = round((((mother_height + father_height) / 2) * 0.96), 1)
         self.children = []
 
     def have_baby(self, male):

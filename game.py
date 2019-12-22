@@ -66,6 +66,10 @@ print(female1.children[6].height)
 female1.have_baby(male1)
 print(female1.children[7].height)
 
+male2 = Male(180, 190)
+print(male2.height)
+female2 = Female(175, 188)
+print(female2.height)
 
 #create a new generation.
 #for each pair, the have baby function will be called on the female, using the male as an argument. this means the height of the new person will be partly inherited. also create a random sex. this will be an interesting attribute - if it's random, I could potentially not have enough new mating pairs.
