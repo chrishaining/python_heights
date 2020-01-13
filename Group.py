@@ -8,6 +8,9 @@ class Group:
         self.females = []
         self.population = len(self.males) + len(self.females)
 
-#
+    def add_male(self, male):
+        self.males.append(male)
+    
+
 
 # function to update the average heights based on the population

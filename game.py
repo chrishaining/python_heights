@@ -2,6 +2,7 @@ from Person import Person
 from Male import Male
 from Female import Female
 from Group import Group
+import matplotlib as plt
 
 # person1 = Person()
 # male1 = Male()
@@ -89,5 +90,8 @@ for index, value in enumerate(female2.children):
     person=index
     print("Person {person} is a {sex} and is {height} cm tall".format(person=person, sex=value.sex, height=value.height))
 print(female2.children[0].sex)
+group1 = Group()
+group1.add_male(male1)
 #create a new generation.
 #for each pair, the have baby function will be called on the female, using the male as an argument. this means the height of the new person will be partly inherited. also create a random sex. this will be an interesting attribute - if it's random, I could potentially not have enough new mating pairs.
+print("Group: {}".format(group1.males))
